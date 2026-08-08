@@ -1,0 +1,28 @@
+strategy:
+  momentum_column: momentum_12_1
+  transaction_cost_bps: 10
+  volatility_floor: null
+
+backtest:
+  trading_days_per_year: 252
+
+robustness:
+  momentum_columns:
+    - momentum_3_1
+    - momentum_6_1
+    - momentum_12_1
+
+  transaction_cost_bps:
+    - 0
+    - 5
+    - 10
+    - 25
+    - 50
+
+  volatility_floors:
+    - null
+    - 0.05
+    - 0.10
+
+walk_forward:
+  lookback_years: 5
